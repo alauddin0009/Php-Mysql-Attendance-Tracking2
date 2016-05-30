@@ -60,7 +60,7 @@ include("connect.php");
 	mysql_close($con);
 
 ?>
-<?php //echo $row['0']; 
+<?php  
 }//closing of isset
 ?>
 </html>
