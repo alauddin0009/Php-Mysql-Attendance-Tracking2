@@ -1,7 +1,9 @@
 <html>
 <head>
-
-<title>Admin Panel</title>
+<meta charset="utf-8">
+<title>Student Management System</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
 <?php
 session_start();
 if(!isset($_SESSION['a_username'])){
@@ -9,37 +11,10 @@ if(!isset($_SESSION['a_username'])){
 	}
 else {
 ?>
-<style type="text/css">
-	   /* unvisited link */
-	a:link {
-		color: #400000;
-		text-decoration:none;
-	}
-
-	/* visited link */
-	a:visited {
-		
-	}
-
-	/* mouse over link */
-	a:hover {
-		color: hotpink;
-	}
-
-	/* selected link */
-	a:active {
-		color: blue;
-	}
-	p{
-		font-size: 20px;
-		padding-top: 10px;
-		padding-right: 0px;
-		padding-bottom: 10px;
-		padding-left: 0px;
-	}
-  </style>
-</head>
-<body>
+<?php
+include("header-all.php");
+?>
+<div class="content_main">
 <p align="right"><a href="logout.php">Log Out</a></P>
 <table align="center">
 	<tr>
@@ -73,8 +48,10 @@ else {
 		<td><p><a href="admin-edit.php">Change My User Password</a></p></td>
 	</tr>
 </table>
-</body>
+</div>
+<?php
+include("footer.php");
+?>
 <?php
 }
 ?>
-</html>

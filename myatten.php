@@ -1,10 +1,9 @@
 <html>
-
 <head>
-  <style type="text/css">
- 
-  </style>
-  <title>My Attendance</title>
+<meta charset="utf-8">
+<title>Student Management System</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
   <?php
 session_start();
 if(!isset($_SESSION['s_username'])){
@@ -12,9 +11,11 @@ if(!isset($_SESSION['s_username'])){
 	}
 else {
 ?>
-</head>
+<?php
+include("header-all.php");
+?>
+<div class="content_main">
 
-<body>
 <p align="right"><a href="logout.php">Log Out</a></P>
 <?php
 
@@ -98,8 +99,11 @@ else {
 		
 	</tr>
 </table>
-	
-</body>
+
+</div>
+<?php
+include("footer.php");
+?>
 <?php
 }//closing of isset
 ?>

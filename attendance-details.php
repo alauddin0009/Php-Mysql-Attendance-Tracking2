@@ -1,16 +1,22 @@
 <html>
 <head>
-<title>Full Addendance Sheet</title>
+<meta charset="utf-8">
+<title>Student Management System</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
-<style type="text/css">
-	
-</style>
 <?php
 session_start();
 if(!isset($_SESSION['t_id'])){
 	header("location: index.php");
 	}
 else {
+	?>
+	<?php
+include("header-all.php");
+?>
+<div class="content_main">
+<p align="right"><a href="logout.php">Log Out</a></P>
+	<?php
 	$table_name=$_GET['tn'];
 	include("connect.php");
 // sending query
@@ -21,7 +27,6 @@ if (!$result)
 } 
 
 $fields_num = mysql_num_fields($result);
-
 echo "<table  align='center' border='1'><tr>";
 // printing table headers
 for($i=0; $i<$fields_num; $i++)
@@ -34,21 +39,17 @@ echo "</tr>\n";
 while($row = mysql_fetch_row($result))
 {
     echo "<tr>";
-
-    // $row is array... foreach( .. ) puts every element
-    // of $row to $cell variable
-     foreach($row as $cell)
+    foreach($row as $cell)
         echo "<td>$cell</td>";
-
-    echo "</tr>\n";
+		echo "</tr>\n";
 }
 mysql_free_result($result);
 ?>
-<body>
-<p align="right"><a href="logout.php">Log Out</a></P>
-</body>
-
+</table>
+</div>
+<?php
+include("footer.php");
+?>
 <?php
 }
 ?>
-</html>

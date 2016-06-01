@@ -1,17 +1,9 @@
 <html>
-
 <head>
-  <style type="text/css">
-      body{background:url(bb.jpg);
-	   background-size:200% 200%;
-	   -moz-background-size:100% 100%; /* Firefox 3.6 */
-	   background-repeat:no-repeat;
-	   word-wrap:break-word;}
-	   
-	   p{
-		   line-height: 60%;
-	   }
-  </style>
+<meta charset="utf-8">
+<title>Student Management System</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
   <script type="text/javascript">     
         function PrintDiv() {    
            var divToPrint = document.getElementById('divToPrint');
@@ -21,7 +13,6 @@
             popupWin.document.close();
                 }
      </script>
- <title>Attendance Input </title>
  <?php
 session_start();
 if(!isset($_SESSION['a_username'])){
@@ -29,8 +20,10 @@ if(!isset($_SESSION['a_username'])){
 	}
 else {
 ?>
-</head>
-<body>
+<?php
+include("header-all.php");
+?>
+<div class="content_main">
 <p align="right"><a href="logout.php">Log Out</a></P>
 <?php
 $no_of_sub=$_GET['id'];
@@ -275,8 +268,9 @@ if(isset($_POST['Submit'])){
 	$student_Id=array();
 	?>
 	<!--Printing Page Start from Here-->
+	</br>
 	<center><h2>For Printing This Page click This Print Button</h2>
-            
+            </br>
              <input type="button" value="     Print Button     " onClick="PrintDiv();" />
 			<div id="divToPrint" >   <div></br>
 	
@@ -392,17 +386,14 @@ if(isset($_POST['Submit'])){
 		</tr>
 <?php	}	// Closing of K for loop?>
 	</table>
-	
+	</div>
+	</div>
 <?php
 	} //Closing of Isset Submit
-	/**print_r($Sub_code);
-	echo "</br>";
-	print_r($T_ids);
-	echo "</br>";
-	print_r($table_name);
-	echo "</br>";
-	print_r($student_Id);**/
-
+	
 }// Closing of isset	?>
-</body>
-</html>
+</br></br>
+</div>
+<?php
+include("footer.php");
+?>

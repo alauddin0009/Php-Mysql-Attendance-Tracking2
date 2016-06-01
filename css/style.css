@@ -1,0 +1,351 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin:0;
+	padding:0
+}
+body{
+	font-family:arial;
+	font-size:16px;
+	line-height:18px;
+	background:#38444E 
+}
+a{
+	color:green;
+	text-decoration:none;
+}
+a:hover{
+	color:purple;
+	text-decoration:none;
+}
+.fix{
+	overflow:hidden;
+	}
+img{
+	width:100%;
+	height:auto;
+
+}
+.margin{
+	margin:auto;
+}
+.main{
+	border-radius:15px 15px ;
+	width:960px;
+	height:auto;
+	background:transparent;
+
+
+}
+.menu{
+	border-top:3px solid #3d566e;
+	width:960px;
+	height:100px;
+	background: white;
+	}
+
+
+.menu img{
+	margin-left:5px;
+	margin-top:5px;
+	padding-left:5px;
+	padding-top:5px;
+	float:left;
+	width:250px;
+	height:100px;
+
+}
+.navbar{
+	margin-top:15px;
+	padding-top:15px;
+	float:right;
+}
+.navbar img{
+	margin-top:4px;
+	padding-top:4px;
+	width:10px;
+	height:10px
+}
+.navbar ul{
+	width:590px;
+	height:50px;
+	list-style:none;
+}
+.navbar ul li{
+	float:left;
+	display:block;
+}
+.navbar ul li a{
+	font-weight:bold;
+	font-size:16px;
+	font-style:oblique;
+	color:#2aaacb;
+	padding:10px;
+}
+.navbar ul li a:hover{
+	text-size:14px;
+	font-style:normal;
+	color:orange;
+	background:transparent;
+}
+.slider{
+	width:960px;
+	height:300px;
+}
+.slider img{
+	width:960px;
+	height:300px;
+}
+.maincontent{
+	width:960px;
+	min-height:300px;
+	padding-bottom:20px;
+	background:#fff;
+}
+.mar {
+	width:900px;
+	height:auto;
+	background:transparent;
+	color:gray;
+	font-style:italic;
+	font-size:8px;
+	margin:auto;
+	
+	
+	
+}
+
+.content_main{
+	width:80%;
+	margin:0 auto;
+	background:#fff;
+}
+.content1{
+	margin-top:10px;
+	padding-top:10px;
+	width:310px;
+	height:600px;
+	float:left;
+	margin-top:5px;
+	padding-top:5px;
+}
+.content1 img{
+	
+	margin-top:10px;
+	padding-top:10px;
+	width:130px;
+	height:130px;
+	margin-left:40px;
+	padding-left:40px;
+}
+	
+.content1 h2{
+	margin-top:5px;
+	padding-top:5px;
+	margin-left:70px;
+	padding-left:70x;
+
+}
+.content1 p{
+	margin-top:5px;
+	padding-top:5px;
+	margin-left:10px;
+	padding-left:10px;
+	margin-right:5px;
+	padding-right:5px;
+	
+}
+.content1 p a:hover{
+	font-weight:normal;
+}
+.content2{
+	margin-top:5px;
+	padding-top:5px;
+	width:310px;
+	height:600px;
+	float:left;
+	
+	margin-left:5px;
+	padding-left:px;
+}
+.content2 img{
+	
+	margin-top:10px;
+	padding-top:10px;
+	width:130px;
+	height:130px;
+	margin-left:40px;
+	padding-left:40px;
+}
+.content2 img:hover{
+	
+	background:transparent;
+}	
+.content2 h2{
+	margin-top:5px;
+	padding-top:5px;
+	margin-left:70px;
+	padding-left:70x;
+
+}
+.content2 p{
+	margin-top:5px;
+	padding-top:5px;
+	margin-right:5px;
+	padding-right:5px;
+	margin-left:10px;
+	padding-left:10px;
+}
+.content2 p a:hover{
+	font-weight:normal;
+}
+.content3{
+	margin-top:5px;
+	padding-top:5px;
+	margin-left:10px;
+	padding-left:10px;
+	width:300px;
+	height:600px;
+	float:left;
+	
+}
+.content3 img{
+	
+	margin-top:10px;
+	padding-top:10px;
+	width:130px;
+	height:130px;
+	margin-left:40px;
+	padding-left:40px;
+}
+	
+.content3 h2{
+	margin-top:5px;
+	padding-top:5px;
+	margin-left:70px;
+	padding-left:70x;
+
+}
+.content3 p{
+	margin-top:5px;
+	padding-top:5px;
+	margin-left:10px;
+	padding-left:10px;
+	margin-right:5px;
+	padding-right:5px;
+}
+.content3 p a:hover{
+	font-weight:normal;
+}
+.footer{
+	border-radius:0 0 15px 15px;
+	background:gray;
+	width:960px;
+	height:130px;
+	align:left;
+	border-bottom:3px solid white;
+}
+.footer ul{
+	list-style:none;
+	margin:10px 0 0 140px;
+	padding:10px 0 0 140px;
+	width:960px;
+	height:30px;
+}
+.footer li{
+	
+	float:left;
+
+	display:block;
+}
+
+.footer li a{
+	font-size:16px;
+	color:black;
+	padding:10px ;
+	font-weight:bold;
+}
+.footer li a:hover{
+	color:green;
+	background:transparent;
+	font-style:italic;
+	
+}
+.footer p{
+	text-align:center
+}
+.footer p a{
+	font-style:italic;
+}
+.footer p a:hover{
+	font-weight:bold;
+}
+.social ul{
+	list-style:none;
+	margin:10px 0 0 200px;
+	padding:10px 10px 0 200px;
+	width:960px;
+	height:30px;
+}
+.social li{
+	
+	float:left;
+	display:block;
+}
+
+.social li a{
+	padding:5px ;
+}
+.social li a:hover{
+	
+	background:transparent;
+}
+.social img{
+	width:30px;
+	height:30px
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

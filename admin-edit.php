@@ -1,3 +1,9 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Student Management System</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
 <?php
 session_start();
 if(!isset($_SESSION['a_username'])){
@@ -5,6 +11,10 @@ if(!isset($_SESSION['a_username'])){
 	}
 else {
 ?>
+<?php
+include("header-all.php");
+?>
+<div class="content_main">
 <p align="right"><a href="logout.php">Log Out</a></p>
 <table align="center">
 	<tr>
@@ -50,7 +60,10 @@ else {
 		</td>
 	</tr>
 </table>
-
+</div>
+<?php
+include("footer.php");
+?>
 <?php
 $flag = false;
 include("connect.php");

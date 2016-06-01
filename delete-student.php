@@ -1,6 +1,9 @@
 <html>
 <head>
-<title>Delete Student Record</title>
+<meta charset="utf-8">
+<title>Student Management System</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
 <?php
 session_start();
 if(!isset($_SESSION['a_username'])){
@@ -8,8 +11,11 @@ if(!isset($_SESSION['a_username'])){
 	}
 else {
 ?>
-</head>
-<body>
+<?php
+include("header-all.php");
+?>
+<div class="content_main">
+
 <p align="right"><a href="logout.php">Log Out</a></P>
 <form name="form1" method="post">
 <table class="black" width="610" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#FFFFCC">
@@ -106,11 +112,10 @@ else {
 	</tr>
 </table>
 </form> 
-Class VARCHAR(15) NOT NULL,
-Batch VARCHAR(10) NOT NULL,
-Section VARCHAR(10) NOT NULL
-
-</body>
+</div>
+<?php
+include("footer.php");
+?>
 <?php
 include("connect.php");
 if(isset($_POST['Submit']))
@@ -132,4 +137,3 @@ if(isset($_POST['Submit']))
 }
 }//Closing Isset
 ?>
-</html>

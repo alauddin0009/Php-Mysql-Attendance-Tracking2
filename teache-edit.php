@@ -1,3 +1,9 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Student Management System</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
 <?php
 session_start();
 if(!isset($_SESSION['t_id'])){
@@ -6,6 +12,10 @@ if(!isset($_SESSION['t_id'])){
 else {
 	$te_id=$_GET['t_id'];
 ?>
+<?php
+include("header-all.php");
+?>
+<div class="content_main">
 <p align="right"><a href="logout.php">Log Out</a></P>
 <table align="center">
 	<tr>
@@ -49,7 +59,10 @@ else {
 		</td>
 	</tr>
 </table>
-
+</div>
+<?php
+include("footer.php");
+?>
 <?php
 include("connect.php");
 if(isset($_POST['a_Submit'])){

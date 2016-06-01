@@ -1,28 +1,9 @@
 <html>
 <head>
-<title>Attendance Entry</title>
+<meta charset="utf-8">
+<title>Student Management System</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
-<style type="text/css">
-	a:link {
-		color: #400000;
-		text-decoration:none;
-	}
-
-	/* visited link */
-	a:visited {
-		
-	}
-
-	/* mouse over link */
-	a:hover {
-		color: hotpink;
-	}
-
-	/* selected link */
-	a:active {
-		color: blue;
-	}
-</style>
 <?php
 session_start();
 if(!isset($_SESSION['t_id'])){
@@ -30,6 +11,10 @@ if(!isset($_SESSION['t_id'])){
 	}
 else {
 ?>
+<?php
+include("header-all.php");
+?>
+<div class="content_main">
 <?php
 
 	$Code=$_GET['Co'];
@@ -120,6 +105,10 @@ else {
 	
 </table>
 <p align="center"><a href="attendance-details.php?tn=<?php echo $table_name; ?>">See Details Attendance</a></P>
+</div>
+<?php
+include("footer.php");
+?>
 <?php
 include("connect.php");
 if(isset($_POST['Submit']))
@@ -146,4 +135,3 @@ if(isset($_POST['Submit']))
 }//closing of isset
 ?>
 
-</html>

@@ -1,28 +1,9 @@
 <html>
 <head>
-<title>Teacher's Home Page</title>
-<style type="text/css">
-	   /* unvisited link */
-	a:link {
-		color: #400000;
-		text-decoration:none;
-	}
-
-	/* visited link */
-	a:visited {
-		
-	}
-
-	/* mouse over link */
-	a:hover {
-		color: hotpink;
-	}
-
-	/* selected link */
-	a:active {
-		color: blue;
-	}
-  </style>
+<meta charset="utf-8">
+<title>Student Management System</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
 <?php
 session_start();
 if(!isset($_SESSION['t_id'])){
@@ -31,10 +12,13 @@ if(!isset($_SESSION['t_id'])){
 else {
 	$te_id=$_SESSION['t_id'];
 ?>
-</head>
+<?php
+include("header-all.php");
+?>
+<div class="content_main">
 <p align="right"><a href="logout.php">Log Out</a></P>
-<h2 align="center">List of Classes</h2>
 <p align="center"><a href="teache-edit.php?t_id=<?php echo $te_id;?>">Edit My Information</a></P>
+</br>
 <?php
 $teacher_Id=$_GET['t_id'];
 include("connect.php");
@@ -60,7 +44,11 @@ include("connect.php");
 	mysql_close($con);
 
 ?>
+</br></br>
+</div>
+<?php
+include("footer.php");
+?>
 <?php  
 }//closing of isset
 ?>
-</html>

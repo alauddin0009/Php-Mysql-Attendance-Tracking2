@@ -1,15 +1,34 @@
 <html>
 <head>
-<title>Studnet's Home Page</title>
+<meta charset="utf-8">
+<title>Student Management System</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
 <?php
 session_start();
 if(!isset($_SESSION['s_username'])){
 	header("location: index.php");
 	}
 else {
+	if(isset($_POST['Submit']))
+{
+	$S_Id=$_POST['S_Id'];
+	$T_Id=$_POST['T_Id'];
+	$Code=$_POST['Code'];
+	$CurrentYear=$_POST['CurrentYear'];
+	$Class=$_POST['Class'];
+	$Batch=$_POST['Batch'];
+	$Semester=$_POST['Semester'];
+	$Section=$_POST['Section'];
+	header("location:myatten.php?Co=$Code&Cu=$CurrentYear&Cl=$Class&B=$Batch&Se=$Semester&Sc=$Section&I=$S_Id&TI=$T_Id");
+}
 ?>
-</head>
-<body>
+<!--Header php file do not support here-->			
+<?php
+include("header-all.php");
+?>
+<div class="content_main">
+<!--Header php file do not support here-->
 <p align="right"><a href="logout.php">Log Out</a></P>
 <p align="center"><a href="student-edit.php">Edit My Information</a></P>
 <form name="form1" method="post">
@@ -206,32 +225,13 @@ else {
 	</tr>
 </table>
 </form>
+<!--Footer php file do not support here-->
+</div>
+<?php //include("footer.php");?>
+<!--Footer php file do not support here-->
 
-</br></br>
-	$Code=$_POST['Code'];
-	$CurrentYear=$_POST['CurrentYear'];
-	$Class=$_POST['Class'];
-	$Batch=$_POST['Batch'];
-	$Semester=$_POST['Semester'];
-	$Section=$_POST['Section'];
-</br></br> 
-Attendance of sub 1</br>
-.........................</br>
-Attendance of sub n
 <?php
-if(isset($_POST['Submit']))
-{
-	$S_Id=$_POST['S_Id'];
-	$T_Id=$_POST['T_Id'];
-	$Code=$_POST['Code'];
-	$CurrentYear=$_POST['CurrentYear'];
-	$Class=$_POST['Class'];
-	$Batch=$_POST['Batch'];
-	$Semester=$_POST['Semester'];
-	$Section=$_POST['Section'];
-	header("location:myatten.php?Co=$Code&Cu=$CurrentYear&Cl=$Class&B=$Batch&Se=$Semester&Sc=$Section&I=$S_Id&TI=$T_Id");
-}
+
+include("footer.php");
 }//closing of isset
 ?>
-</body>
-</html>

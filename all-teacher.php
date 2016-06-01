@@ -1,3 +1,9 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Student Management System</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
 <?php
 session_start();
 if(!isset($_SESSION['a_username'])){
@@ -5,6 +11,10 @@ if(!isset($_SESSION['a_username'])){
 	}
 else {
 ?>
+<?php
+include("header-all.php");
+?>
+<div class="content_main">
 <p align="right"><a href="logout.php">Log Out</a></P>
 <table align="center" border="1">
 	<tr>
@@ -34,6 +44,10 @@ else {
 				?>
 	
 </table>
+</div>
+<?php
+include("footer.php");
+?>
 <?php
 }//session close
 ?>

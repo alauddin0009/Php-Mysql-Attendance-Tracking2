@@ -1,14 +1,9 @@
 <html>
-
 <head>
-  <style type="text/css">
-      body{background:url(bb.jpg);
-	   background-size:200% 200%;
-	   -moz-background-size:100% 100%; /* Firefox 3.6 */
-	   background-repeat:no-repeat;
-	   word-wrap:break-word;}
-  </style>
- <title>Attendance Sheet </title>
+<meta charset="utf-8">
+<title>Student Management System</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
  <?php
 session_start();
 if(!isset($_SESSION['a_username'])){
@@ -16,9 +11,10 @@ if(!isset($_SESSION['a_username'])){
 	}
 else {
 ?>
-</head>
-
-<body>
+<?php
+include("header-all.php");
+?>
+<div class="content_main">
 <p align="right"><a href="logout.php">Log Out</a></P>
 <form name="form1" method="post">
 <table class="black" width="650" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#FFFFCC">
@@ -36,8 +32,10 @@ else {
 		<td><input align='right' type="submit" name="Submit" value="Go"></td>
 	</tr>
 </table>
-</form> 
-</body>
+</div>
+<?php
+include("footer.php");
+?>
 <?php
 if(isset($_POST['Submit'])){
 	$no_of_sub=$_POST['no_of_sub'];
@@ -47,4 +45,3 @@ if(isset($_POST['Submit'])){
 
 }//closing of Isset
 ?>
-</html>
