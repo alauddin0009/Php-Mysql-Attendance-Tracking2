@@ -1,8 +1,25 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Student Management System</title>
+<title>Admin Login Panel</title>
 <link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
+<style type="text/css">
+	   font{
+	font-family: Raleway;
+	}
+	form[name=form1] { 
+		background:#EFF8FB;
+		padding:30px 30px 30px 50px;
+		margin:40px 30px 30px 180px;
+	}   
+	tr{
+		height:40px;
+	}
+	* {
+		font-family: Raleway;
+	}
+</style>
 </head>
 <?php 
 session_start();
@@ -13,15 +30,15 @@ include("header-all.php");
 <div class="content_main">
 <table align="center">
 	<tr>
-		<td colspan="3" align="center" text-align="center">
+		<td colspan="3" align="center">
 			<!--Admin ------------------------------------------------------------------------------------->
 			<form name="form1" method="post">
-			<table class="black" width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#FFFFCC">
+			<table class="black" width="400" border="0" align="center" cellpadding="0" cellspacing="1">
 			<tr>
 			<td colspan="3" align="center" ><strong><font size=6 color="#C0C0C0">Admin Login</font></strong></td>
 			</tr>
 			<tr>
-			<td width="180"><font color="black" size=4 >Username</font></td>
+			<td width="180"><font size=4 >Username</font></td>
 			<td width="6"><font color="black">:&nbsp;</font></td>
 			<td width="200"><input name="a_username" type="text" id="a_username" placeholder="Admin Username" required></td>
 			</tr>

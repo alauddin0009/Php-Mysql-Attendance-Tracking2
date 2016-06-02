@@ -1,8 +1,28 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Student Management System</title>
+<title>Adding Teacher Record</title>
 <link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
+<style type="text/css">
+	form[name=form1] { 
+		width:60%;
+		background:#EFF8FB;
+		padding:30px 10px 30px 20px;
+		margin:30px 40px 30px 130px;
+	} 
+	.back_logout_div{
+		width:90%;
+		padding-left:40px;
+		padding-top:40px;
+	}
+	tr{
+		height:40px;
+	}
+	* {
+		font-family: Raleway;
+	}
+</style>
 </head>
 <?php
 session_start();
@@ -20,7 +40,7 @@ include("header-all.php");
 		<div class="back_div" style="float:right; height:100%;"><p align="right"><a href="logout.php"style="text-decoration:underline; color:#2E9AFE;">Log Out</a></P></div>
 	</div>
 <form name="form1" method="post">
-<table class="black" width="600" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#FFFFCC">
+<table class="black" width="600" border="0" align="center" cellpadding="0" cellspacing="1">
 	<tr>
 		<td colspan="3" align="center" ><strong><font size=5 color="#C0C0C0">Enter Following Information To Add A Teacher</font></strong></td>
 	</tr>

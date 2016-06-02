@@ -1,8 +1,29 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Student Management System</title>
+<title>Submit Attendance Record || Attendance Management System</title>
 <link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
+<style type="text/css">
+	.back_logout_div{
+		width:90%;
+		padding-left:40px;
+		padding-top:40px;
+	}
+	* {
+		font-family: Raleway;
+	}
+	.atten_table{
+		margin-left: 380px;
+	}
+	tr{
+		height:35px;
+	}
+	.ancor_see_det_atten{
+		padding-top:40px;
+		margin-left:-20px;
+	}
+</style>
 </head>
 <?php
 session_start();
@@ -60,7 +81,7 @@ include("header-all.php");
 		<div class="back_div" style="float:left; height:100%;"><p align="left"><a href="teacher.php?t_id=<?php echo $T_Id;?>" style="text-decoration:underline; color:#2E9AFE;">Back</a></P></div>
 		<div class="back_div" style="float:right; height:100%;"><p align="right"><a href="logout.php"style="text-decoration:underline; color:#2E9AFE;">Log Out</a></P></div>
 	</div>
-<table align="center">
+<table align="center" class="atten_table">
 	<form method="post">
 	<?php  for($i=1; $i<=sizeof($arrays)-1; $i++){?>
 		<tr>
@@ -107,7 +128,7 @@ include("header-all.php");
 	</form>
 	
 </table>
-<p align="center"><a href="attendance-details.php?tn=<?php echo $table_name; ?>">See Details Attendance</a></P>
+<p align="center" class="ancor_see_det_atten"><a href="attendance-details.php?tn=<?php echo $table_name; ?>">See Details Attendance</a></P>
 </div>
 <?php
 include("footer.php");

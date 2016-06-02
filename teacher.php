@@ -1,8 +1,34 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Student Management System</title>
+<title>Teacher Main Page || Attendance Management System</title>
 <link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
+<style type="text/css">
+	.back_logout_div{
+		width:90%;
+		padding-left:40px;
+		padding-top:40px;
+	}
+	tr{
+		height:35px;
+		border:none;
+	}
+	.teacher_table{
+		margin-left:80px;
+		margin-top:30px;
+	}
+	.small{
+		width:50px;
+	}
+	* {
+		font-family: Raleway;
+	}
+	.ancor_edi_my_inf{
+		padding-top:40px;
+		margin-left:-20px;
+	}
+</style>
 </head>
 <?php
 session_start();
@@ -16,8 +42,8 @@ else {
 include("header-all.php");
 ?>
 <div class="content_main">
-<p align="right"><a href="logout.php" style="text-decoration:underline; color:#2E9AFE;">Log Out</a></P>
-<p align="center"><a href="teache-edit.php?t_id=<?php echo $te_id;?>">Edit My Information</a></P>
+<p align="right"><a href="logout.php" style="text-decoration:underline; color:#2E9AFE; padding-right:50px;">Log Out</a></P>
+<p align="center"class="ancor_edi_my_inf"><a href="teache-edit.php?t_id=<?php echo $te_id;?>">Edit My Information</a></P>
 </br>
 <?php
 $teacher_Id=$_GET['t_id'];
@@ -31,8 +57,8 @@ include("connect.php");
 		}
 		else
 		{
-			echo "<table border='1px' align='center'>";
-			echo "<tr><td>"."Code"."</td><td>"."Title"."</td><td>"."Year"."</td><td>"."My Id"."</td><td>"."Class/Department"."</td><td>"."Batch"."</td><td>"."Semester"."</td><td>"."Section"."</td><td>"."Credit"."</td></tr>";
+			echo "<table border='1px' align='center' class='teacher_table'>";
+			echo "<tr><td class='small'>"."Code"."</td><td>"."Title"."</td><td class='small'>"."Year"."</td><td class='small'>"."My Id"."</td><td class='small'>"."Class/Dep."."</td><td class='small'>"."Batch"."</td><td>"."Semester"."</td><td class='small'>"."Section"."</td><td class='small'>"."Credit"."</td></tr>";
 			while($row = mysql_fetch_array($result)) 
 			{
 				echo "<tr><td><a href='attendance-entry.php?Co=".$row['0']."&T=". $row['1']."&Y=". $row['2']."

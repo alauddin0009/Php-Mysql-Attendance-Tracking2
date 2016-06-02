@@ -1,8 +1,31 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Student Management System</title>
+<title>Student Main Page || Attendance Management System</title>
 <link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
+<style type="text/css">
+	form[name=form1] { 
+		width:60%;
+		background:#EFF8FB;
+		padding:30px 10px 30px 20px;
+		margin:30px 40px 30px 180px;
+	} 
+	.back_logout_div{
+		width:90%;
+		padding-left:40px;
+		padding-top:40px;
+	}
+	tr{
+		height:40px;
+	}
+	* {
+		font-family: Raleway;
+	}
+	.ancor_edi_my_inf{
+		padding-top:40px;
+	}
+</style>
 </head>
 <?php
 session_start();
@@ -29,10 +52,10 @@ include("header-all.php");
 ?>
 <div class="content_main">
 <!--Header php file do not support here-->
-<p align="right"><a href="logout.php" style="text-decoration:underline; color:#2E9AFE;">Log Out</a></P>
-<p align="center"><a href="student-edit.php">Edit My Information</a></P>
+<p align="right"><a href="logout.php" style="text-decoration:underline; color:#2E9AFE; padding-right:50px;">Log Out</a></P>
+<p align="center" class="ancor_edi_my_inf"><a href="student-edit.php">Edit My Information</a></P>
 <form name="form1" method="post">
-<table class="black" width="600" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#FFFFCC">
+<table class="black" width="600" border="0" align="center" cellpadding="0" cellspacing="1">
 	<tr>
 		<td colspan="3" align="center" ><strong><font size=5 color="#C0C0C0">Enter Following Information To See Attendance</font></strong></td>
 	</tr>

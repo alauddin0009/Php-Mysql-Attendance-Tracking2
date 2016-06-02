@@ -1,8 +1,28 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Student Management System</title>
+<title>Edit Teacher Information || Attendance Management System</title>
 <link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
+<style type="text/css">
+	form[name=form1] { 
+		width:60%;
+		background:#EFF8FB;
+		padding:30px 10px 30px 20px;
+		margin:30px 40px 30px 230px;
+	} 
+	.back_logout_div{
+		width:90%;
+		padding-left:40px;
+		padding-top:40px;
+	}
+	tr{
+		height:40px;
+	}
+	* {
+		font-family: Raleway;
+	}
+</style>
 </head>
 <?php
 session_start();
@@ -25,7 +45,7 @@ include("header-all.php");
 		<td colspan="3" align="center" text-align="center">
 			<!--Admin ------------------------------------------------------------------------------------->
 			<form name="form1" method="post">
-			<table class="black" width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#FFFFCC">
+			<table class="black" width="400" border="0" align="center" cellpadding="0" cellspacing="1">
 			<tr>
 			<td colspan="3" align="center" ><strong><font size=6 color="#C0C0C0">Edit Information</font></strong></td>
 			</tr>

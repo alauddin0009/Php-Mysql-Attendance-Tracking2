@@ -1,8 +1,22 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Student Management System</title>
+<title>Student Login Panel || Attendance Management System</title>
 <link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
+<style type="text/css">
+	form[name=form3] { 
+		background:#EFF8FB;
+		padding:30px 30px 30px 50px;
+		margin:40px 30px 30px 180px;
+	}   
+	tr{
+		height:40px;
+	}
+	* {
+		font-family: Raleway;
+	}
+</style>
 </head>
 <?php 
 session_start();
@@ -16,7 +30,7 @@ include("header-all.php");
 		<td>
 			<!--Student------------------------------------------------------------------------------------->
 			<form name="form3" method="post">
-			<table align='left' class="black" width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#FFFFCC">
+			<table align='center' class="black" width="400" border="0" align="center" cellpadding="0" cellspacing="1">
 			<tr>
 			<td colspan="3" align="center"><strong><font  size=6 color="#C0C0C0">Student Login</font></strong></td>
 			</tr>

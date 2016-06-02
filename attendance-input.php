@@ -1,8 +1,28 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Student Management System</title>
+<title>Number Of Subject For Attendance Sheet</title>
 <link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
+<style type="text/css">
+	form[name=form1] { 
+		width:73%;
+		background:#EFF8FB;
+		padding:30px 10px 30px 20px;
+		margin:30px 40px 30px 110px;
+	} 
+	.back_logout_div{
+		width:90%;
+		padding-left:40px;
+		padding-top:40px;
+	}
+	tr{
+		height:40px;
+	}
+	* {
+		font-family: Raleway;
+	}
+</style>
 </head>
   <script type="text/javascript">     
         function PrintDiv() {    
@@ -32,7 +52,7 @@ include("header-all.php");
 $no_of_sub=$_GET['id'];
 ?>
 <form name="form1" method="post">
-<table class="black" width="600" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#FFFFCC">
+<table class="black" width="700" border="0" align="center" cellpadding="0" cellspacing="1">
 	<tr>
 		<td colspan="6" align="center" ><strong><font size=5 color="#C0C0C0">Enter Following Information To Assign A Class</font></strong></td>
 	</tr>
@@ -66,7 +86,7 @@ $no_of_sub=$_GET['id'];
 			
 		</td>
 	
-		<td><font size=4 color="black">Subject Code <?php echo $i; ?></font></td>
+		<td ><font size=4 color="black">Subject Code <?php echo $i; ?></font></td>
 		<td><font color="black">:&nbsp;</font></td>
 		<td>
 			<!--<input name="Code<?php //echo $i; ?>" type="text" id="Code" placeholder="Enter Subject Code" required>-->
