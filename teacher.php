@@ -16,7 +16,7 @@ else {
 include("header-all.php");
 ?>
 <div class="content_main">
-<p align="right"><a href="logout.php">Log Out</a></P>
+<p align="right"><a href="logout.php" style="text-decoration:underline; color:#2E9AFE;">Log Out</a></P>
 <p align="center"><a href="teache-edit.php?t_id=<?php echo $te_id;?>">Edit My Information</a></P>
 </br>
 <?php
@@ -39,7 +39,7 @@ include("connect.php");
 				&I=". $row['3']."&Cl=". $row['4']."&B=". $row['5']."&S=". $row['6']."
 				&Sc=". $row['7']."&cr=". $row['8']."'>".$row['0']."</a></td><td>".$row['1']."</td><td>".$row['2']."</td><td>".$row['3']."</td><td>".$row['4']."</td><td>".$row['5']."</td><td>".$row['6']."</td><td>".$row['7']."</td><td>".$row['8']."</td></tr>";
 			}
-			echo "<table>";
+			echo "</table>";
 		}
 	mysql_close($con);
 

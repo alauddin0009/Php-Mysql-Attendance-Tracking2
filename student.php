@@ -29,7 +29,7 @@ include("header-all.php");
 ?>
 <div class="content_main">
 <!--Header php file do not support here-->
-<p align="right"><a href="logout.php">Log Out</a></P>
+<p align="right"><a href="logout.php" style="text-decoration:underline; color:#2E9AFE;">Log Out</a></P>
 <p align="center"><a href="student-edit.php">Edit My Information</a></P>
 <form name="form1" method="post">
 <table class="black" width="600" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#FFFFCC">

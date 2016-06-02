@@ -56,7 +56,10 @@ include("header-all.php");
 		}
 		$attendance=0;
 ?>
-<p align="right"><a href="logout.php">Log Out</a></P>
+	<div class="back_logout_div" style="height:30px;">
+		<div class="back_div" style="float:left; height:100%;"><p align="left"><a href="teacher.php?t_id=<?php echo $T_Id;?>" style="text-decoration:underline; color:#2E9AFE;">Back</a></P></div>
+		<div class="back_div" style="float:right; height:100%;"><p align="right"><a href="logout.php"style="text-decoration:underline; color:#2E9AFE;">Log Out</a></P></div>
+	</div>
 <table align="center">
 	<form method="post">
 	<?php  for($i=1; $i<=sizeof($arrays)-1; $i++){?>

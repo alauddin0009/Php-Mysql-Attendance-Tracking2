@@ -15,7 +15,7 @@ else {
 include("header-all.php");
 ?>
 <div class="content_main">
-<p align="right"><a href="logout.php">Log Out</a></P>
+<p align="right"><a href="logout.php" style="text-decoration:underline; color:#2E9AFE;">Log Out</a></P>
 <table align="center">
 	<tr>
 		<td><p><a href="add-student.php">Add student</a></p></td>

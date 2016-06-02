@@ -16,7 +16,10 @@ else {
 include("header-all.php");
 ?>
 <div class="content_main">
-<p align="right"><a href="logout.php">Log Out</a></P>
+	<div class="back_logout_div" style="height:30px;">
+		<div class="back_div" style="float:left; height:100%;"><p align="left"><a href="teacher.php?t_id=<?php echo $te_id;?>" style="text-decoration:underline; color:#2E9AFE;">Back</a></P></div>
+		<div class="back_div" style="float:right; height:100%;"><p align="right"><a href="logout.php"style="text-decoration:underline; color:#2E9AFE;">Log Out</a></P></div>
+	</div>
 <table align="center">
 	<tr>
 		<td colspan="3" align="center" text-align="center">
