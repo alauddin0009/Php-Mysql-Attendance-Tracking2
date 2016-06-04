@@ -3,6 +3,25 @@
 <meta charset="utf-8">
 <title>Details Attendance</title>
 <link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
+<style type="text/css">
+	.back_logout_div{
+		width:90%;
+		padding-left:40px;
+		padding-top:40px;
+	}
+	tr{
+		height:35px;
+		border:none;
+	}
+	.teacher_table{
+		margin-left:100px;
+		margin-top:30px;
+	}
+	* {
+		font-family: Raleway;
+	}
+</style>
 </head>
 <?php
 session_start();
