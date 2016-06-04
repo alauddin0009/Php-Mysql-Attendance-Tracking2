@@ -1,7 +1,7 @@
                      <div class="content1 fix">
 							<img src="image/u.png">
 						<h2><a href="admin-panel.php">Admin Portal</a></h2>
-						<p>Student attendance management system deals with the maintenance of the student's attendance details.
+						<p class="p_main">Student attendance management system deals with the maintenance of the student's attendance details.
 					   It is generates the attendance of the student on basis of presence in class. 
 					   It is maintained on the daily basis of their attendance. the staffs will be 
 						provided <a href="admin-panel.php">  Login       </a>   with the separate username & password to make the student's status. 
@@ -21,7 +21,7 @@
 					   
 					  <img src="image/u.png">
 						<h2><a href="teacher-panel.php">Teacher Portal</a></h2>
-					   <p>Student attendance management system deals with the maintenance of the student's attendance details.
+					   <p class="p_main">Student attendance management system deals with the maintenance of the student's attendance details.
 					   It is generates the attendance of the student on basis of presence in class. 
 					   It is maintained on the daily basis of their attendance. the staffs will be 
 						provided <a href="teacher-panel.php"> Login </a>   with the separate username & password to make the student's status. 
@@ -43,7 +43,7 @@
 											 
 														 <img src="image/u.png">
 														<h2><a href="student-panel.php">Student Portal</a></h2>
-														<p>Student attendance management system deals with the maintenance of the student's attendance details.
+														<p class="p_main">Student attendance management system deals with the maintenance of the student's attendance details.
 					   It is generates the attendance of the student on basis of presence in class. 
 					   It is maintained on the daily basis of their attendance. the staffs will be 
 						provided <a href="student-panel.php"> Login </a>   with the separate username & password to make the student's status. 

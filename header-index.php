@@ -12,6 +12,11 @@
 	height:50px;
 	list-style:none;
 }
+.p_main{
+	   line-height: 150%;
+	   text-align: justify;
+	
+}
  </style>
 <body>
 <div class="fix  margin main">
