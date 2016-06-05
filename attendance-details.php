@@ -10,6 +10,9 @@
 		padding-left:40px;
 		padding-top:40px;
 	}
+	.td{
+		width:15px;
+	}
 	tr{
 		height:35px;
 		border:none;
@@ -29,12 +32,16 @@ if(!isset($_SESSION['t_id'])){
 	header("location: index.php");
 	}
 else {
+	$T_Id=$_SESSION['t_id'];
 	?>
 	<?php
 include("header-all.php");
 ?>
 <div class="content_main">
-<p align="right"><a href="logout.php">Log Out</a></P>
+	<div class="back_logout_div" style="height:30px;">
+		<div class="back_div" style="float:left; height:100%;"><p align="left"><a href="teacher.php?t_id=<?php echo $T_Id;?>" style="text-decoration:underline; color:#2E9AFE;">Back</a></P></div>
+		<div class="back_div" style="float:right; height:100%;"><p align="right"><a href="logout.php"style="text-decoration:underline; color:#2E9AFE;">Log Out</a></P></div>
+	</div>
 	<?php
 	$table_name=$_GET['tn'];
 	include("connect.php");
@@ -46,12 +53,12 @@ if (!$result)
 } 
 
 $fields_num = mysql_num_fields($result);
-echo "<table  align='center' border='1'><tr>";
+echo "<table class='teacher_table'  align='center' border='1'><tr>";
 // printing table headers
 for($i=0; $i<$fields_num; $i++)
 {
     $field = mysql_fetch_field($result);
-    echo "<td>{$field->name}</td>";
+    echo "<td class='td'>{$field->name}</td>";
 }
 echo "</tr>\n";
 // printing table rows
