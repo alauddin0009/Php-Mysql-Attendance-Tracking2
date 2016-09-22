@@ -32,6 +32,7 @@ if(!isset($_SESSION['a_username'])){
 else {
 ?>
 <?php
+ob_start();
 include("header-all.php");
 ?>
 <div class="content_main">
@@ -40,7 +41,7 @@ include("header-all.php");
 		<div class="back_div" style="float:left; height:100%;"><p align="left"><a href="admin.php" style="text-decoration:underline; color:#2E9AFE;">Back</a></P></div>
 		<div class="back_div" style="float:right; height:100%;"><p align="right"><a href="logout.php"style="text-decoration:underline; color:#2E9AFE;">Log Out</a></P></div>
 	</div>
-<form name="form1" method="post">
+<form name="form1" method="post" onsubmit="return confirm('Really Want To Delete The Students?');">
 <table class="black" width="610" border="0" align="center" cellpadding="0" cellspacing="1">
 	<tr>
 		<td colspan="3" align="center" ><strong><font size=5 color="#C0C0C0">Enter Following Information To Delete Students (A Group)</font></strong></td>
@@ -131,7 +132,7 @@ include("header-all.php");
 	<tr>
 		<td>&nbsp</td>
 		<td>&nbsp</td>
-		<td><input align='right' type="submit" name="Submit" value="Delete Students"></td>
+		<td><input align='right' type="submit" name="Submit" value="Delete Students" ></td>
 	</tr>
 </table>
 </form> 
@@ -140,9 +141,10 @@ include("header-all.php");
 include("footer.php");
 ?>
 <?php
-include("connect.php");
+
 if(isset($_POST['Submit']))
 {
+	include("connect.php");
 	$Class=$_POST['Class'];
 	$Batch=$_POST['Batch'];
 	$Section=$_POST['Section'];
@@ -150,13 +152,14 @@ if(isset($_POST['Submit']))
 	$query= "DELETE FROM `students` WHERE `Class`='$Class' AND `Batch`='$Batch' AND `Section`='$Section'";
 	if(mysql_query($query))
 		{
+			header("location:delete-student.php");
 			echo  "<script>alert('Students Record has been deleted Successfully.')</script>";
 		}
 		else
 		{
 			//echo "<script>alert('All Post And Image has Not been send in database')</script>";
 		}
-		mysql_close($con);
+	mysql_close($con);
 }
 }//Closing Isset
 ?>

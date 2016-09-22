@@ -331,7 +331,9 @@ if(isset($_POST['Submit']))
 		mysql_close($con);
 		//Creating Table
 		include("connect.php");
-		$str1="CREATE TABLE IF NOT EXISTS `".$table_name."` (Date datetime NOT NULL DEFAULT NOW(), ";
+		//$str1="CREATE TABLE IF NOT EXISTS `".$table_name."` (Date datetime NOT NULL DEFAULT NOW(), ";(for mysql 5.6)
+		$str1="CREATE TABLE IF NOT EXISTS `".$table_name."` (Date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, ";
+			//CREATE TABLE IF NOT EXISTS `TableTime` (`Date` TIMESTAMP default CURRENT_TIMESTAMP NOT NULL);
 		$str2 = '';
 		for($i=0; $i<=sizeof($arrays)-1; $i++){
 			$str2 .= " `".$arrays[$i]."`"." INT(2) NOT NULL";
