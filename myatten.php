@@ -63,7 +63,7 @@ include("header-all.php");
 	$count = mysql_num_rows($result);
 		if ($count==0)
 		{
-			echo "You have not been assigned any class.";
+			//echo "You have not been assigned any class.";
 		}
 		else
 		{
@@ -81,7 +81,7 @@ include("header-all.php");
 	$count = mysql_num_rows($result);
 		if ($count==0)
 		{
-			echo "You have not been assigned any class.";
+			//echo "You have not been assigned any class.";
 		}
 		else
 		{

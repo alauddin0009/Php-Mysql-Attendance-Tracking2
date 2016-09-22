@@ -57,7 +57,21 @@ include("header-all.php");
 	<tr>
 		<td width="78"><font color="black" size=4 >Session</font></td>
 		<td width="6"><font color="black">:&nbsp;</font></td>
-		<td width="294"><input name="Session" type="text" id="Session" placeholder="Enter Session" required></td>
+		<td width="294">
+			<!-- <input name="Session" type="text" id="Session" placeholder="Enter Session" required> -->
+			<select style="width: 160px;" name="Session" class="textfield05" id="Session">
+				<option value="2011-2012">2011-2012</option>
+				<option value="2012-2013">2012-2013</option>
+				<option value="2013-2014">2013-2014</option>
+				<option value="2014-2015">2014-2015</option>
+				<option value="2015-2016">2015-2016</option>
+				<option value="2016-2017">2016-2017</option>
+				<option value="2017-2018">2017-2018</option>
+				<option value="2018-2019">2018-2019</option>
+				<option value="2019-2020">2019-2020</option>
+				<option value="2020-2021">2020-2021</option>
+			</select>
+		</td>
 	</tr>
 	<tr>
 		<td width="78"><font color="black" size=4 >Class/Department</font></td>
@@ -76,37 +90,41 @@ include("header-all.php");
 		<td><font size=4 color="black">Batch</font></td>
 		<td><font color="black">:&nbsp;</font></td>
 		<td><input name="Batch" type="number" min="1" id="Batch" placeholder="Enter Batch(Only Number)" required></td>
-		</font>
 	</tr>
 	<tr>
 		<td><font size=4 color="black">Section</font></td>
 		<td><font color="black">:&nbsp;</font></td>
-		<td><input name="Section" type="text" id="Section" placeholder="Enter Section" required></td>
-		</font>
+		<td>
+			<!-- <input name="Section" type="text" id="Section" placeholder="Enter Section" required> -->
+			<select style="width: 160px;" name="Section" class="textfield05" id="Section">
+				<option value="Common">Common</option>
+				<option value="A">A</option>
+				<option value="B">B</option>
+				<option value="C">C</option>
+				<option value="D">D</option>
+				<option value="E">E</option>
+			</select>
+		</td>
 	</tr>
 	<tr>
 		<td><font size=4 color="black">Student's Username</font></td>
 		<td><font color="black">:&nbsp;</font></td>
-		<td><input name="S_UserName" type="text" pattern=".{0}|.{5,10}" title="5-10 Characters" id="S_UserName" placeholder="Choose An Username" required></td>
-		</font>
+		<td><input name="S_UserName" type="text" title="5-10 Characters" id="S_UserName" placeholder="Choose An Username" required></td>
 	</tr>
 	<tr>
 		<td><font size=4 color="black">Student's Password</font></td>
 		<td><font color="black">:&nbsp;</font></td>
-		<td><input name="S_Password" type="password" id="S_Password" placeholder="Choose A Password" pattern=".{0}|.{5,10}" title="5-10 Characters" required></td>
-		</font>
+		<td><input name="S_Password" type="password" id="S_Password" placeholder="Choose A Password" title="5-10 Characters" required></td>
 	</tr>
 	<tr>
 		<td><font size=4 color="black">Phone/Mobile No</font></td>
 		<td><font color="black">:&nbsp;</font></td>
 		<td><input name="S_Phone" type="text" id="S_Phone" placeholder="Enter Phone No" required></td>
-		</font>
 	</tr>
 	<tr>
 		<td><font size=4 color="black">E-mail Id</font></td>
 		<td><font color="black">:&nbsp;</font></td>
 		<td><input name="S_Email" type="email" id="S_Email" placeholder="Enter E-mail" required></td>
-		</font>
 	</tr>
 	<tr>
 		<td>&nbsp</td>
