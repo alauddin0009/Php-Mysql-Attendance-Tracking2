@@ -10,17 +10,37 @@
 		padding-left:40px;
 		padding-top:40px;
 	}
-	.td{
-		width:15px;
+	.content_main{
+		width:950px;
+		margin:0 auto;
+		background:#fff;
+		
+	}
+	.table_div{
+		width:880px;
+		margin:0 auto;
+		overflow:auto;
+	}
+	td{
+		max-width: 60px;
+		text-align: center;
 	}
 	tr{
 		height:35px;
 		border:none;
 	}
-	.teacher_table{
-		margin-left:100px;
-		margin-top:30px;
+	table tr:nth-child(even) td{
+		background-color: #F2F2F2;
 	}
+	.td{
+		background-color: #E3F6CE;
+	}
+	.teacher_table{
+		margin-top:30px;
+		margin-bottom: 20px;
+		width: 950px;
+	}
+	
 	* {
 		font-family: Raleway;
 	}
@@ -45,6 +65,7 @@ include("header-all.php");
 	<?php
 	$table_name=$_GET['tn'];
 	include("connect.php");
+echo "<div class='table_div'>";
 // sending query
 $result = mysql_query("SELECT * FROM `$table_name`");
 if (!$result) 
@@ -72,6 +93,7 @@ while($row = mysql_fetch_row($result))
 mysql_free_result($result);
 ?>
 </table>
+</div>
 </div>
 <?php
 include("footer.php");

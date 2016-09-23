@@ -68,7 +68,7 @@ include("header-all.php");
 		}
 		mysql_close($con);
 		//Collecting Column Nmae
-		$str1='(';
+		$str1="(`Date`, ";
 		for($i=1; $i<=sizeof($arrays)-1; $i++){
 			$str1.= "`".$arrays[$i]."`";
 			if($i!=sizeof($arrays)-1){
@@ -137,7 +137,10 @@ include("footer.php");
 include("connect.php");
 if(isset($_POST['Submit']))
 {
-	$str3='(';
+	date_default_timezone_set('Asia/Dhaka');
+	$date = date("D M j, Y g:ia");
+	//$date = date("d-m-Y g:i:s");
+	$str3="("."'".$date."', ";
 		for($i=0; $i<=sizeof($arrays1)-1; $i++){
 			$str3.= "'".$arrays1[$i]."'";
 			if($i!=sizeof($arrays1)-1){
