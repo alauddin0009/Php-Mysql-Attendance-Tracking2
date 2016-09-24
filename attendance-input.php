@@ -22,6 +22,24 @@
 	* {
 		font-family: Raleway;
 	}
+	.table_show_sheet{
+		margin-top:30px;
+		margin-bottom: 20px;
+		max-width: 950px;
+	}
+	.div_show_sheet{
+		width:880px;
+		margin:0 auto;
+		overflow:auto;
+	}
+	.table_show_sheet tr:nth-child(even) td{
+		background-color: #F2F2F2;
+	}
+	.table_show_sheet td{
+		text-align: center;
+	}
+	.table_show_sheet td:nth-child(1) { color: blue; }
+	.table_show_sheet tr:nth-child(1) { color: green; }
 </style>
 </head>
   <script type="text/javascript">     
@@ -298,13 +316,13 @@ if(isset($_POST['Submit'])){
 			<div id="divToPrint" >   <div></br>
 	
 	<!--Institute Details go here or pad-->
-	<h2 align="center" >Institute of science and technology</h2>
+	<h2 align="center" >Institute of Science and Technology</h2>
 	<p align="center" >Established : 1994</p>
 	<p align="center">Class/Department : <?php echo $Class; ?>(<?php echo $Section; ?>)  <?php echo $Semester; ?> Semester</p>
 	<p align="center">Batch : <?php echo $Batch; ?>th  Year : <?php echo $CurrentYear; ?></p>
 	<p>&nbsp;</p>
-	
-	<table border='1' align="center"> 
+	<div class="div_show_sheet">
+	<table class="table_show_sheet" border='1' align="center"> 
 		<tr>
 			<td><strong>Student Id</strong></td>
 			<?php for($j=0; $j<$no_of_sub; $j++ ){?>
@@ -362,7 +380,7 @@ if(isset($_POST['Submit'])){
 				while($row1 = mysql_fetch_array($result1)) 
 				{
 					$my_attendance= $row1['maxid'];
-					echo "<strong>".$my_attendance."</strong> out of ";
+					echo "<strong>".$my_attendance."</strong> of ";
 					
 				}
 				
@@ -401,7 +419,7 @@ if(isset($_POST['Submit'])){
 			?>
 			</td>
 			<?php } ///Closing of l for loop	?>
-			<td> <?php echo $my_attendance_total. " out of ".$class_held_total. " = ".number_format((float)$attendance_percent_total, 2, '.', '')."%";
+			<td> <?php echo $my_attendance_total. " of ".$class_held_total. " = ".number_format((float)$attendance_percent_total, 2, '.', '')."%";
 			$my_attendance_total=0;
 			$class_held_total=0;
 			?></td>
@@ -409,6 +427,7 @@ if(isset($_POST['Submit'])){
 		</tr>
 <?php	}	// Closing of K for loop?>
 	</table>
+	</div>
 	</div>
 	</div>
 <?php
