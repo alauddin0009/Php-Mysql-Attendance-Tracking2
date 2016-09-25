@@ -52,6 +52,8 @@
                 }
      </script>
  <?php
+ ini_set('max_execution_time', 600);  
+ini_set('mysql.connect_timeout', -1);
 session_start();
 if(!isset($_SESSION['a_username'])){
 	header("location: index.php");
