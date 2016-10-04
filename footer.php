@@ -6,7 +6,7 @@
 							<li> <a href="about-us.php"> About Us </a></li>
 							<li> <a href="contact-us.php"> Contact us </a></li>
 						</ul>	
-								<p >Copyright &copy;<a href="https://facebook.com/shironamhin.shahadat/">  SA  </a>    2016</p>
+								<p >Copyright &copy;<a href="#">  SAMS  </a>    2016</p>
 							<div class="social fix">
 							<ul>
 							<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
