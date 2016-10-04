@@ -1,8 +1,8 @@
 <?php
-$servername = "sql6.freesqldatabase.com";
-$username = "sql6136702";
-$password = "CiEZDmJRed";
-$dbname = "sql6136702";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "auddin";
 
 
 $con=mysql_connect($servername, $username, $password);

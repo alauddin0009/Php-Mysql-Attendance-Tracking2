@@ -312,14 +312,14 @@ if(isset($_POST['Submit'])){
 	?>
 	<!--Printing Page Start from Here-->
 	</br>
-	<center><h2>For Printing This Page click This Print Button</h2>
+	<center><h2>For Printing This Page click The Print Button</h2>
             </br>
              <input type="button" value="     Print Button     " onClick="PrintDiv();" />
 			<div id="divToPrint" >   <div></br>
 	
 	<!--Institute Details go here or pad-->
-	<h2 align="center" >Institute of Science and Technology</h2>
-	<p align="center" >Established : 1994</p>
+	<h2 align="center" >Daffodil Institute of Information Technology</h2>
+	<p align="center" >Established : 1997</p>
 	<p align="center">Class/Department : <?php echo $Class; ?>(<?php echo $Section; ?>)  <?php echo $Semester; ?> Semester</p>
 	<p align="center">Batch : <?php echo $Batch; ?>th  Year : <?php echo $CurrentYear; ?></p>
 	<p>&nbsp;</p>
@@ -344,6 +344,11 @@ if(isset($_POST['Submit'])){
 	include("connect.php");
 	$query5= "SHOW COLUMNS FROM `$table_name[0]`";
 	$result5 = mysql_query($query5);
+	if(!$result5){
+		echo "<p style='color:red;'>No Data. Your selection may be wrong.</p>";
+
+	}else{
+
 	$count5 = mysql_num_rows($result5);
 		if ($count5==0)
 		{
@@ -357,6 +362,8 @@ if(isset($_POST['Submit'])){
 				$student_Id[] = $row5['Field'];
 			}
 		}
+
+	}
 		mysql_close($con);
 		
 		for($k=1; $k<sizeof($student_Id); $k++ ){
@@ -421,7 +428,7 @@ if(isset($_POST['Submit'])){
 			?>
 			</td>
 			<?php } ///Closing of l for loop	?>
-			<td> <?php echo $my_attendance_total. " of ".$class_held_total. " = ".number_format((float)$attendance_percent_total, 2, '.', '')."%";
+			<td> <?php echo $my_attendance_total. " of ".$class_held_total. " = <strong>".number_format((float)$attendance_percent_total, 2, '.', '')."</strong>%";
 			$my_attendance_total=0;
 			$class_held_total=0;
 			?></td>
