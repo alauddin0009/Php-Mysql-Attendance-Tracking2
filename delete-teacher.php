@@ -103,15 +103,15 @@ if(isset($_POST['Submit']))
 		
 	//Deleting Table Named current T_Id
 	include("connect.php");
-	$query1= "DROP TABLE IF EXISTS `$T_Id`";
+	$query1= "DELETE FROM `classes` WHERE `T_Id`='$T_Id'";
 	if(mysql_query($query1))
 	{
 
-		echo  "<script>alert('Theacher's Table Dropped')</script>";
+		echo  "<script>alert('All Classes of this teacher deleted')</script>";
 	}
 	else
 	{
-		echo "<script>alert('All Post And Image has Not been send in database')</script>";
+		echo "<script>alert('Not send in database')</script>";
 	}
 	mysql_close($con);
 	echo  "<script>alert('You Are Ok To Go.')</script>";
