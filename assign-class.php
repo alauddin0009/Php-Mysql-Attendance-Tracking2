@@ -308,7 +308,8 @@ if(isset($_POST['Submit']))
 	$Section=$_POST['Section'];
 	$Credit=$_POST['Credit'];
 	
-	$query= "INSERT INTO `$T_Id`(`Code`, `Sub_Name`, `CurrentYear`, `T_Id`, `Class`, `Batch`, `Semester`, `Section`, `Credit`) VALUES ('$Code','$Sub_Name','$CurrentYear','$T_Id','$Class','$Batch','$Semester','$Section','$Credit')";
+	//$query= "INSERT INTO `$T_Id`(`Code`, `Sub_Name`, `CurrentYear`, `T_Id`, `Class`, `Batch`, `Semester`, `Section`, `Credit`) VALUES ('$Code','$Sub_Name','$CurrentYear','$T_Id','$Class','$Batch','$Semester','$Section','$Credit')";
+	$query= "INSERT INTO `classes`(`Code`, `Sub_Name`, `CurrentYear`, `T_Id`, `Class`, `Batch`, `Semester`, `Section`, `Credit`) VALUES ('$Code','$Sub_Name','$CurrentYear','$T_Id','$Class','$Batch','$Semester','$Section','$Credit')";
 	if(mysql_query($query))
 		{
 			echo  "<script>alert('Successfully saved in database')</script>";

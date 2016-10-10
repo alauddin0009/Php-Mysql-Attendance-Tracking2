@@ -56,14 +56,17 @@ else {
 	?>
 	<?php
 include("header-all.php");
+$table_name=$_GET['tn'];
+$myArray = explode('-', $table_name);
 ?>
 <div class="content_main">
 	<div class="back_logout_div" style="height:30px;">
 		<div class="back_div" style="float:left; height:100%;"><p align="left"><a href="teacher.php?t_id=<?php echo $T_Id;?>" style="text-decoration:underline; color:#2E9AFE;">Back</a></P></div>
 		<div class="back_div" style="float:right; height:100%;"><p align="right"><a href="logout.php"style="text-decoration:underline; color:#2E9AFE;">Log Out</a></P></div>
 	</div>
+	<h2 align="center" style="margin-top: 20px;"><?php echo "Subject Code: ".$myArray[5]."-".$myArray[6]; ?></h2>
+	<h5 align="center" style="margin-top: 15px; margin-bottom:20px;"><?php echo $myArray[2]." (".$myArray[7]."), ".$myArray[4]; ?></h5>
 	<?php
-	$table_name=$_GET['tn'];
 	include("connect.php");
 echo "<div class='table_div'>";
 // sending query

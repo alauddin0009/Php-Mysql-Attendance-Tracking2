@@ -48,7 +48,8 @@ include("header-all.php");
 <?php
 $teacher_Id=$_GET['t_id'];
 include("connect.php");
-	$query= "SELECT * FROM `$teacher_Id`";
+	//$query= "SELECT * FROM `$teacher_Id`";
+	$query= "SELECT * FROM `classes` WHERE `T_Id`='$teacher_Id';";
 	$result = mysql_query($query);
 	$count = mysql_num_rows($result);
 		if ($count==0)

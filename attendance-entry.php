@@ -81,6 +81,8 @@ include("header-all.php");
 		<div class="back_div" style="float:left; height:100%;"><p align="left"><a href="teacher.php?t_id=<?php echo $T_Id;?>" style="text-decoration:underline; color:#2E9AFE;">Back</a></P></div>
 		<div class="back_div" style="float:right; height:100%;"><p align="right"><a href="logout.php"style="text-decoration:underline; color:#2E9AFE;">Log Out</a></P></div>
 	</div>
+	<h2 align="center" style="margin-top: 20px;"><?php echo $Sub_Name." (".$Code.")"; ?></h2>
+	<h5 align="center" style="margin-top: 15px; margin-bottom:30px;"><?php echo $Class." (".$Section."), ".$Semester; ?></h5>
 <table align="center" class="atten_table">
 	<form method="post">
 	<?php  for($i=1; $i<=sizeof($arrays)-1; $i++){?>

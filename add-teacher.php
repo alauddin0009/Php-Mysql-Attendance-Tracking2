@@ -102,26 +102,6 @@ if(isset($_POST['Submit']))
 			//echo "<script>alert('All Post And Image has Not been send in database')</script>";
 		}
 		mysql_close($con);
-
-//Collecting Current T_Id for creating TABLE
-include("connect.php");
-$result = mysql_query("SHOW TABLE STATUS WHERE `Name` = 'teachers'");
-$data = mysql_fetch_assoc($result);
-$next_increment = $data['Auto_increment']-1;
-echo $next_increment;
-mysql_close($con);
-//Creating Table with current T_Id
-include("connect.php");
-$query2="CREATE TABLE IF NOT EXISTS `$next_increment` (Code VARCHAR(10) NOT NULL, Sub_Name VARCHAR(90) NOT NULL, CurrentYear INT(8) NOT NULL,
-T_Id INT(8) NOT NULL, Class VARCHAR(15) NOT NULL, Batch VARCHAR(10) NOT NULL, Semester VARCHAR(15) NOT NULL, Section VARCHAR(10) NOT NULL, Credit float(5) NOT NULL)";
-if(mysql_query($query2))
-{
-	//echo  "<script>alert('Teacher Table has been created')</script>";
-}
-else
-{
-	die(mysql_error());
-}
 }
 }//Closing of Isset
 ?>
