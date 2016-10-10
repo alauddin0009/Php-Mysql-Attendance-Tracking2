@@ -40,7 +40,7 @@ include("header-all.php");
 		<div class="back_div" style="float:left; height:100%;"><p align="left"><a href="admin.php" style="text-decoration:underline; color:#2E9AFE;">Back</a></P></div>
 		<div class="back_div" style="float:right; height:100%;"><p align="right"><a href="logout.php"style="text-decoration:underline; color:#2E9AFE;">Log Out</a></P></div>
 	</div>
-<form name="form1" method="post" onsubmit="return confirm('Really Want To Delete The Teacher?');">
+<form name="form1" method="post" onsubmit="return confirm('First Delete All Classes of this Teacher.\nReally Want To Delete The Teacher?');">
 <table class="black" width="600" border="0" align="center" cellpadding="0" cellspacing="1">
 	<tr>
 		<td colspan="3" align="center" ><strong><font size=5 color="#C0C0C0">Enter Following Information To Delete A Teacher</font></strong></td>

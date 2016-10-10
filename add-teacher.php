@@ -57,7 +57,7 @@ include("header-all.php");
 	<tr>
 		<td><font size=4 color="black">Teacher's Password</font></td>
 		<td><font color="black">:&nbsp;</font></td>
-		<td><input name="T_Password" type="password" id="T_Password" pattern=".{0}|.{5,10}" title="5-10 Characters" placeholder="Choose A Password" required></td>
+		<td><input name="T_Password" type="password" id="T_Password" title="5-10 Characters" placeholder="Choose A Password" required></td>
 		</font>
 	</tr>
 	<tr>
