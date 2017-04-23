@@ -51,7 +51,7 @@ include("header-all.php");
 			<select  style="width: 150px;" name="T_Id" class="textfield05" id="T_Id" required>
 				<?php 
 					include("connect.php");
-					$query= "SELECT `T_Id` FROM `classes` ORDER BY T_Id ASC";
+					$query= "SELECT DISTINCT `T_Id` FROM `classes` ORDER BY T_Id ASC";
 					$result = mysql_query($query);
 					$count = mysql_num_rows($result);
 					if ($count==0)
@@ -156,7 +156,7 @@ include("header-all.php");
 		</font>
 	</tr>
 	<tr>
-		<td><font size=4 color="black">Current Year</font></td>
+		<td><font size=4 color="black">Year</font></td>
 		<td><font color="black">:&nbsp;</font></td>
 		<td>
 			<select style="width: 150px;" name="CurrentYear" class="textfield05" id="CurrentYear">

@@ -241,6 +241,24 @@ img{
 .content3 p a:hover{
 	font-weight:normal;
 }
+
+input[type="text"]{
+	width: 160px;
+}
+input[type="number"]{
+	width: 160px;
+}
+input[type="email"]{
+	width: 160px;
+}
+input[type="password"]{
+	width: 160px;
+}
+
+
+
+
+
 .footer{
 	border-radius:0 0 15px 15px;
 	background:gray;
