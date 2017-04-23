@@ -47,7 +47,7 @@ include("header-all.php");
 	<tr>
 		<td width="78"><font color="black" size=4 >Subject Code</font></td>
 		<td width="6"><font color="black">:&nbsp;</font></td>
-		<td width="294"><input name="Code" type="text" id="Code" placeholder="Enter Subject Code" required></td>
+		<td width="294"><input name="Code" type="text" id="Code" placeholder="Sub Code (ex. CSE-121)" required></td>
 	</tr>
 	<tr>
 		<td width="78"><font color="black" size=4 >Subject Title</font></td>

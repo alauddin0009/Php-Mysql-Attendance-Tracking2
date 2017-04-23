@@ -18,6 +18,7 @@
 	
 }
  </style>
+ <link href="image/favicon.ico" rel="icon" type="image/x-icon" />
 <body>
 <div class="fix  margin main">
 				<div class="menu margin fix">

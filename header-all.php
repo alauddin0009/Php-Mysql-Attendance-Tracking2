@@ -1,4 +1,5 @@
 <link href="css/button.css" rel="stylesheet" type="text/css">
+<link href="image/favicon.ico" rel="icon" type="image/x-icon" />
 <style type="text/css">
 	   /* unvisited link */
 .footer ul{

@@ -11,7 +11,7 @@
 							<ul>
 							<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
 							<li> <a href="https://facebook.com/"><img src="image/fb.png" ></a> </li>
-							<li> <a href="https://google.cpm.bd/"> <img src="image/google.png" ></a></li>
+							<li> <a href="https://google.com.bd/"> <img src="image/google.png" ></a></li>
 							<li> <a href="https://twitter.com/"> <img src="image/twitter.png" ></a></li>
 							<li> <a href="https://mail.google.com/"><img src="image/mail.png" ></a></li>
 						</ul>
